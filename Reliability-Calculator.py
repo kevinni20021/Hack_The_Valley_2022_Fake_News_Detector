@@ -21,7 +21,7 @@ URL_DATABASE = {}
 
 if __name__ == "__main__":
     # Read the data
-    df = pd.read_csv('D:\\DataFlair\\news.csv')
+    df = pd.read_csv('news.csv')
     # DataFlair - Get the labels
     labels = df.label
     # DataFlair - Split the dataset

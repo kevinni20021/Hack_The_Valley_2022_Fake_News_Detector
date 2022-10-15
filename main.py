@@ -15,14 +15,3 @@ def summerize(url):
 
 if __name__ == "__main__":
     app.run
-
-@app.route('/')
-def summerize(url):
-    article = Article(url)
-    article.download()
-    article.parse()
-    article.nlp()
-    return article.summary
-
-if __name__ == "__main__":
-    app.run
