@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 import itertools
+
+import sklearn.model_selection
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
@@ -42,6 +44,12 @@ if __name__ == "__main__":
     print(f'Accuracy: {round(score * 100, 2)}%')
     # DataFlair - Build confusion matrix
     confusion_matrix(y_test, y_pred, labels=['FAKE', 'REAL'])
+
+def extract_data(filename: str, data: str) -> object:
+    df = pd.read_csv(filename)
+    labels = df.label
+    x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(df[data], labels, train_size=0.99)
+    return
 
 
 def add_url(url: str, index: float = -1) -> None:
