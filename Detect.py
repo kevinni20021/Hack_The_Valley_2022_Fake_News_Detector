@@ -1,10 +1,9 @@
 from GoogleNews import GoogleNews
 
 
-
 def detect(URL: str) -> bool:
     googlenews = GoogleNews()
-    googlenews.search(URL)
+    googlenews.search('site:'+URL)
     news = googlenews.results()
 
     if str(news) == '[]':
