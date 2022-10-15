@@ -5,3 +5,6 @@ Hack the valley fake news detector.
 Requires Python 3.9+ to run
 Requests
 Beautiful Soup 4
+  >>> import nltk
+  >>> nltk.download('punkt')
+  needed to run on initial startup
