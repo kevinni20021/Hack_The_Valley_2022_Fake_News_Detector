@@ -29,6 +29,6 @@ def relatedArticles(url: str) -> any:
         return False
     else:
         for article in news:
-            if article['url'] not in url:
-                set_of_websites.add(Website(article['url'], article['title']))
+            if article['link'] not in url:
+                set_of_websites.add(Website(article['link'], article['title']))
         return set_of_websites
