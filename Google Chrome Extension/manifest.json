@@ -4,9 +4,7 @@
 	"description": "Creating a more credible world",
 	"version": "1.0",
 	"permissions": [
-		"tabs",
-		"http://*/*",
-		"https://*/*"
+		"tabs"
 	],
 	"background": {
 		"service_worker": "background.js"

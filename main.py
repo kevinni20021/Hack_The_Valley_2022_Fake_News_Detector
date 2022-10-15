@@ -1,5 +1,10 @@
 from newspaper import Article
+from flask import Flask
 
+
+app = Flask(__name__)
+
+@app.route('/')
 def summerize(url):
     article = Article(url)
     article.download()
@@ -7,6 +12,5 @@ def summerize(url):
     article.nlp()
     return article.summary
 
-a = "https://www.cbc.ca/news/health/covid19-pandemic-emergency-over-omicron-1.6616471"
-if True:
-    print(summerize(a))
+if __name__ == "__main__":
+    app.run
