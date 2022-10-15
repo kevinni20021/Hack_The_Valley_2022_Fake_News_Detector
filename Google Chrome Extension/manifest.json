@@ -10,5 +10,13 @@
 	],
 	"background": {
 		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "action.html",
+		"default_icon": {
+			"16" : "16_fake_new_logo.png",
+			"32" : "32_fake_new_logo.png",
+			"128" : "128_fake_new_logo.png"
+		}
 	}
 }
