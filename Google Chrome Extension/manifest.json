@@ -1,0 +1,14 @@
+{
+	"manifest_version": 3,
+	"name": "Credable",
+	"description": "Creating a more credible world",
+	"version": "1.0",
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"background": {
+		"service_worker": "background.js"
+	}
+}
