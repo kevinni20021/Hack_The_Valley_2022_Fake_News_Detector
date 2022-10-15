@@ -1,13 +1,12 @@
-import cohere
-# initialize the Cohere Client with an API Key
-co = cohere.Client('3il4BTdsqpWQ953PXEDnQOuljKsMw7iX8ozxrCXp  ')
+from newspaper import Article
 
-# generate a prediction for a prompt
-prediction = co.generate(
-    model='large',
-    prompt='co:here',
-    max_tokens=10)
+def summerize(url):
+    article = Article(url)
+    article.download()
+    article.parse()
+    article.nlp()
+    return article.summary
 
-# print the predicted text
-print('prediction: {}'.format(prediction.generations[0].text))
-
+a = "https://www.cbc.ca/news/health/covid19-pandemic-emergency-over-omicron-1.6616471"
+if True:
+    print(summerize(a))
