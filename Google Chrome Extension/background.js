@@ -9,7 +9,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
                 method: 'POST',
                 body: JSON.stringify({url}),
                 })
-            }) .then((data) => console.log(data))
-        });
-    }
-})
+            }).then((data) => console.log(data.text()))
+        };
+    })
