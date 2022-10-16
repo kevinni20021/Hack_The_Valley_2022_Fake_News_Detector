@@ -1,4 +1,3 @@
-from ReliabilityCalculator import Website
 from GoogleNews import GoogleNews
 import requests
 from bs4 import BeautifulSoup
@@ -20,15 +19,14 @@ def relatedArticles(url: str) -> any:
 
     elif titles[0].__contains__('-'):
         title = titles[0].split('-', 1)[0]
-    print(title)
     googlenews = GoogleNews()
     googlenews.search(title)
     news = googlenews.results()
-    set_of_websites = set()
-    if str(news) == '[]':
-        return False
-    else:
-        for article in news:
-            if article['link'] not in url:
-                set_of_websites.add(Website(article['link'], article['title']))
-        return set_of_websites
+    list_of_links = []
+
+    i = 0
+    for article in news:
+        if article['link'] not in url and i < 3:
+            list_of_links.append(article['link'])
+            i+=1
+    return list_of_links
