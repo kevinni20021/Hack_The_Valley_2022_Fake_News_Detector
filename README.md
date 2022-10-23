@@ -11,7 +11,8 @@ We first scrape the url from the current site and send it to our backend API whi
 Link to project github can be found through our website credability.tech until October 2023. The website is also in the same repository, except it is hosted under a different branch.
 
 # Requirements
-- Python 3.9+ to run API
+- Python 3.9+ to run API 
+
 Python Modules needed:
 - Requests
 - Beautiful Soup 4
@@ -22,7 +23,7 @@ Python Modules needed:
 - Sklearn
 
 # Made by:
-Zein Sleiman
-Weiming Quan
-Omar Jaljoulli
-Kevin Ni
+- Zein Sleiman
+- Weiming Quan
+- Omar Jaljoulli
+- Kevin Ni
